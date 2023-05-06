@@ -1,0 +1,400 @@
+/* Root */
+:root {
+    
+}
+/* Normalize */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var();
+    font-size: 62.5%;
+    color: var();
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+a {
+    text-decoration: none;
+    font-size: 1em;
+    font-family: inherit;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+ul,ol {
+    list-style-type: none;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Components */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Custom Styles */
+ 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 2;
+    width: 100vw;
+    height: 15vh;
+    top: 0;
+ }
+
+ /* Navbar */
+
+.navbar {
+    position: fixed !important;
+    width: 100%;
+}
+ 
+.navbar__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.navbar__item a {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;   
+    color: antiquewhite;
+
+}
+
+/* Items Navbar Hover */
+
+li a {
+    text-decoration: none;
+    position: relative;
+  }
+  
+  li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: antiquewhite;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .4s ease-in-out;
+  }
+  
+ li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+  /* Hero Seccion */
+
+.hero {
+    position: absolute;
+    height: 100vh;
+    background-position: top;
+    background-image: url(./ASSETS/img/casa-moderna-ventanas-panoramicas-playa.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+.hero::before {
+    content: "";
+    background-color: rgba(0,0,0,0);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(2px) brightness(.9);
+    background: linear-gradient(360deg, rgb(64, 80, 101) 1%, rgba(232,232,237,0) 5%);
+}
+
+.hero__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.hero__logo {
+    width: 40%;
+}
+  
+.hero__content h2 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1rem;
+    font-size: clamp(.5rem, 50vw, 3rem);
+    color: antiquewhite;
+}
+.hero__content:hover h2 {
+    transition: .5s ease-in-out;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255);;
+}
+
+
+  
+
+  /* Main Section */
+main {
+    background-color: #405065;
+    background-image: linear-gradient(to  bottom, #405065, #405065, #769e9c, #a6c3b2, #e0e8cd);
+    padding-top: 12em;
+     
+} 
+
+
+
+/* About Us seccion */
+.about {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1frr;
+    
+    padding: 5em;
+    margin-bottom: 25em;
+    gap: 10em 3em;
+}
+
+
+.about img {
+    width: 60%;
+    
+}
+
+.about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: rgb(213, 207, 199); 
+}
+
+.about__content h2 {
+    font-size: 3rem;
+}
+.about__content p {
+    font-size: 1.5rem;
+}
+.about__picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.about__picture img {
+    border-radius: 5px;
+    box-shadow: rgba(199, 190, 190, 0.16) 0px 3px 6px, rgba(183, 179, 179, 0.23) 0px 3px 6px; 
+    
+}
+.about__picture img:hover {
+    transition: .5s ease-in-out;
+    box-shadow: rgba(193, 183, 183, 0.25) 0px 14px 28px, rgba(192, 185, 185, 0.22) 0px 10px 10px;
+    transform: scale(1.2);
+}
+
+/* Contact Us seccion */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  padding-top: 14em;
+  
+}
+.contact-container {
+  max-width: 960px ;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1.5rem;
+  background: rgba(215, 216, 226, 0.29);
+  box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  
+}
+
+.contact-container:hover {
+  transition: .3s all linear;
+  box-shadow: 0px 0px 10px 3px #fff;
+  
+}
+
+ .form-container {
+  padding: 2em ;
+}
+
+.form-container h3 {
+  font-size: 1.5rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #405065;
+}
+
+.contact-form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: rgba(189, 189, 198, 0.992);
+  padding: .5em;
+  border-radius: .4rem;
+  color: 405065;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 20em;
+}
+
+.contact-form .send-button {
+  border: none;
+  outline: none;
+  background: rgb(135, 157, 174);
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.contact-form .send-button:hover {
+  background: hsl(190, 100%, 44%, 0.8);
+  transition: .3s all linear;
+  color: #fff;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Footer */
+
+footer {
+  display: grid;
+  grid-template-rows: 65% 25% 10%;
+  background-color: rgb(64, 80, 101);
+  
+}
+
+.footer__content {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(213, 207, 199);
+  gap: 1em;
+  font-size: 1rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+  
+  
+}
+.footer__contact a:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 5px rgba(255, 255, 255);
+}
+
+.footer__img {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.footer__img img {
+  width: 20%;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  padding: 5em;
+}
+
+.social-media__icons {
+  color: antiquewhite;
+  font-size: 2rem;
+}
+.social-media__icons:hover {
+  color: antiquewhite;
+  text-shadow: 0px 0px 5px rgba(255, 255, 255);
+}
+.social-media__scale:hover {
+  transition: 0.5s;
+transform: scale(1.5)
+}
+.legals {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: antiquewhite;
+}
+
+/* Animations */
+
+.aparecer {
+    opacity: 0; 
+    animation: aparecer 5s ease-in-out forwards; 
+}
+  
+ 
+  @keyframes aparecer {
+    0% { opacity: 0; }
+    98% { opacity: 1;text-shadow: 0px 0px 5px rgba(255, 255, 255); }
+    99% { opacity: 1;text-shadow: 0px 0px 1px rgba(255, 255, 255); } 
+    100% {opacity: 1;}
+}
+  
