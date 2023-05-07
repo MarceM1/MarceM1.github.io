@@ -12,9 +12,9 @@
 }
 
 html {
-    font-family: var();
+    
     font-size: 62.5%;
-    color: var();
+    
     scroll-behavior: smooth;
 }
 
@@ -212,7 +212,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+   
+  
     
 }
 
@@ -220,11 +221,13 @@ main {
     border-radius: 5px;
     box-shadow: rgba(199, 190, 190, 0.16) 0px 3px 6px, rgba(183, 179, 179, 0.23) 0px 3px 6px; 
     
+    
 }
 .about__picture img:hover {
     transition: .5s ease-in-out;
     box-shadow: rgba(193, 183, 183, 0.25) 0px 14px 28px, rgba(192, 185, 185, 0.22) 0px 10px 10px;
-    transform: scale(1.2);
+    transform: scale(1.1);
+    
 }
 
 /* Contact Us seccion */
@@ -239,7 +242,7 @@ main {
   
 }
 .contact-container {
-  max-width: 960px ;
+  max-width: 960px;
   width: 100%;
   margin: auto;
   display: grid;
@@ -383,6 +386,11 @@ transform: scale(1.5)
   color: antiquewhite;
 }
 
+section picture:nth-child(3) {
+  order: -9;
+ 
+  
+}
 /* Animations */
 
 .aparecer {
@@ -398,3 +406,108 @@ transform: scale(1.5)
     100% {opacity: 1;}
 }
   
+
+/* Media Querys */
+
+@media  (max-width: 480px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .hero__logo {
+    width: 70%;
+}
+
+main {
+  padding-top: 5em;
+   
+} 
+
+  /* section picture:nth-child(1) {
+    order: -5;
+    
+  } */
+  
+  /* section picture:nth-child(6) {
+    order: -9;
+    
+  } */
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 3em 1.5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+  }
+
+  .about__content {
+    overflow: hid;
+  }
+  .about__picture img {
+    width: 100%;
+  }
+  .about__content h2 {
+    font-size: 2.3rem;
+  }
+  .about__content p {
+    overflow: hi;
+    font-size: 1.1;
+  }
+
+  .hero__content h2 {
+    font-weight: 300;
+    letter-spacing: .5rem;
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+ gap: 1em;
+ max-width: 100%;
+ border-radius: 0px;
+}
+
+.map  {
+  max-width: 100%;
+  padding: 0 2em;
+
+  
+}
+ 
+  
+};
+
+@media  (max-width: 768px) {
+
+  .navbar {
+    display: none;
+  }
+
+  .hero__logo {
+    width: 70%;
+}
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__picture img {
+    width: 100%;
+  }
+  .hero__content h2 {
+    font-weight: 300;
+    letter-spacing: .5rem;
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+  /* .about__picture:nth-child(3) {
+    order: -1;
+  } */
+  
+};
