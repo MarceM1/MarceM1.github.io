@@ -1,7 +1,5 @@
 /* Root */
-:root {
-    
-}
+
 /* Normalize */
 *,
 *::before,
@@ -12,13 +10,16 @@
 }
 
 html {
-    
+    height: 100vh;
     font-size: 62.5%;
     
     scroll-behavior: smooth;
 }
 
 body {
+ 
+  min-height: 100vh;
+  min-width: 100%;
     overflow-x: hidden;
     font-family: 'Montserrat Alternates', sans-serif;
 }
@@ -106,7 +107,84 @@ li a {
     transform: scaleX(1);
   }
 
-  /* Hero Seccion */
+/* Burguer Menu */
+.burguer-container {
+  display: none;
+}
+
+.burguer__items {
+  position: fixed;
+  height: 100%;
+  width: 55%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.313);
+  backdrop-filter: blur(5px);
+  z-index: 9;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 2rem;
+  right: 4rem;
+  z-index: 999;
+  
+}
+
+.toggle-button i {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+.bi-list {
+  cursor: pointer;
+}
+/* .burguer__items {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+} */
+.burguer__items {
+  padding: 5rem;
+  width: 50%;
+  height: 100vh;
+  display: none;
+  transition: display .5s;
+}
+ 
+.burguer__items li{
+  list-style-type: none;
+  border-bottom: 1px solid #fff;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.burguer__items li:last-child{
+  border-bottom: none ;
+}
+.burguer__items li:first-child a {
+  font-weight: bold;
+}
+.burguer__item {
+  text-align: center;
+  align-self: center;
+  
+}
+.burguer__link {
+  color:antiquewhite;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  transition: font-weight .5s;
+}
+.burguer__link:hover {
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
+}
+
+/* Hero Seccion */
 
 .hero {
     position: absolute;
@@ -345,6 +423,9 @@ footer {
   
   
 }
+.footer__contact a {
+  font-size: 1.5rem;
+}
 .footer__contact a:hover {
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 5px rgba(255, 255, 255);
@@ -408,8 +489,89 @@ section picture:nth-child(3) {
   
 
 /* Media Querys */
+/*  ****** Mobile Divices *****  */
+@media  (min-width: 320px) and (max-width: 480px ) {
 
-@media  (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
+
+  .burguer-container {
+    display: block;
+}
+  .hero__logo {
+    width: 70%;
+}
+
+main {
+  padding-top: 5em;
+   
+} 
+
+  /* section picture:nth-child(1) {
+    order: -5;
+    
+  } */
+  
+  /* section picture:nth-child(6) {
+    order: -9;
+    
+  } */
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 3em 1.5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+  }
+
+  .about__content {
+    overflow: hid;
+  }
+  .about__picture img {
+    width: 100%;
+  }
+  .about__content h2 {
+    font-size: 2.3rem;
+  }
+  .about__content p {
+    overflow: hi;
+    font-size: 1.1;
+  }
+
+  .hero__content h2 {
+    font-weight: 300;
+    letter-spacing: .5rem;
+    font-size: 1.5rem;
+    color: antiquewhite;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+ gap: 1em;
+ max-width: 100%;
+ border-radius: 0px;
+}
+
+.map  {
+  max-width: 100%;
+  padding: 0 2em;
+
+  
+}
+ 
+  
+};
+
+
+
+
+/*  ****** Tablets *****  */
+@media  (min-width: 481px) and (max-width: 768px) {
 
   .navbar {
     display: none;
@@ -479,35 +641,33 @@ main {
 
   
 }
- 
   
 };
 
-@media  (max-width: 768px) {
 
-  .navbar {
-    display: none;
-  }
+/*  ****** Small Screens, laptops*****  */
+@media  (min-width: 769px) and (max-width: 1024px){
 
-  .hero__logo {
-    width: 70%;
-}
-  .about {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .about__picture img {
-    width: 100%;
-  }
-  .hero__content h2 {
-    font-weight: 300;
-    letter-spacing: .5rem;
-    font-size: 1.5rem;
-    color: antiquewhite;
-}
-  /* .about__picture:nth-child(3) {
-    order: -1;
-  } */
-  
 };
+
+/*  ****** Desktops, large screens *****  */
+@media  (min-width: 1025px) and (max-width: 1200px){
+
+};
+
+/*  ****** Desktops, large screens *****  */
+@media  (min-width: 1201px) {
+
+};
+
+@media screen and (min-width: 1000px) {
+  .burguer__items {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .burguer__items li a {
+    font-size: 16px;
+  }
+}
