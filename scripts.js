@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var burgerItems = document.querySelector('.burguer__items');
+    var toggleButton = document.querySelector('.toggle-button');
+    
+    toggleButton.addEventListener('click', function() {
+        if (burgerItems.style.display === 'none') {
+            burgerItems.style.display = 'block';
+          } else {
+            burgerItems.style.display = 'none';
+          }
+        });
+  });
+
 window.sr = ScrollReveal();
     sr.reveal(`.about__content`, {
         duration: 3000,
@@ -35,3 +48,5 @@ window.sr = ScrollReveal();
         distance:  `-500px`
 
     });
+
+
