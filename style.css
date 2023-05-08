@@ -84,12 +84,12 @@ header {
 
 /* Items Navbar Hover */
 
-li a {
+.navbar__item a {
     text-decoration: none;
     position: relative;
   }
   
-  li a::before {
+  .navbar__item a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -102,7 +102,7 @@ li a {
     transition: all .4s ease-in-out;
   }
   
- li a:hover::before {
+  .navbar__item a:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }
@@ -118,8 +118,8 @@ li a {
   width: 55%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.313);
-  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.313);
+  backdrop-filter: blur(5px) brightness(.7);
   z-index: 9;
 }
 
@@ -139,13 +139,7 @@ li a {
 .bi-list {
   cursor: pointer;
 }
-/* .burguer__items {
- 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-} */
+
 .burguer__items {
   padding: 5rem;
   width: 50%;
@@ -174,14 +168,14 @@ li a {
 }
 .burguer__link {
   color:antiquewhite;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   text-align: center;
   transition: font-weight .5s;
 }
 .burguer__link:hover {
   font-weight: bold;
-  border-bottom: 1px solid #fff;
+  
 }
 
 /* Hero Seccion */
