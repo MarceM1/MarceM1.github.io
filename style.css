@@ -1,6 +1,6 @@
-/* Root */
+/* ***** Root *****  */
 
-/* Normalize */
+/*  ***** Normalize *****  */
 *,
 *::before,
 *::after {
@@ -17,8 +17,8 @@ html {
 }
 
 body {
- 
-  min-height: 100vh;
+  background-color: #405065;
+  max-height: 100%;
   min-width: 100%;
     overflow-x: hidden;
     font-family: 'Montserrat Alternates', sans-serif;
@@ -42,13 +42,13 @@ p {
     font-size: 1.2em;
 }
 
-/* Components */
+/*  ***** Components *****  */
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Custom Styles */
+/*  ***** Custom Styles *****  */
  
 header {
     display: flex;
@@ -59,9 +59,17 @@ header {
     width: 100vw;
     height: 15vh;
     top: 0;
- }
+  }
 
- /* Navbar */
+  ::placeholder {
+    color:hsla(268, 14%, 21%, 0.661);
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+  }
+
+ 
+
+/*  ***** Navbar *****  */
 
 .navbar {
     position: fixed !important;
@@ -82,7 +90,7 @@ header {
 
 }
 
-/* Items Navbar Hover */
+/*  ***** Items Navbar *****  Hover */
 
 .navbar__item a {
     text-decoration: none;
@@ -107,7 +115,7 @@ header {
     transform: scaleX(1);
   }
 
-/* Burguer Menu */
+/*  ***** Burguer Menu *****  */
 .burguer-container {
   display: none;
 }
@@ -120,7 +128,7 @@ header {
   left: 0;
   background-color: rgba(0, 0, 0, 0.313);
   backdrop-filter: blur(5px) brightness(.7);
-  z-index: 9;
+  z-index: 999;
 }
 
 .toggle-button {
@@ -178,7 +186,7 @@ header {
   
 }
 
-/* Hero Seccion */
+/*   ***** Hero Seccion  *****  */
 
 .hero {
     position: absolute;
@@ -234,12 +242,13 @@ header {
 
   
 
-  /* Main Section */
+/*   ***** Main Section  ***** 
+ */
 main {
     background-color: #405065;
     background-image: linear-gradient(to  bottom, #405065, #405065, #769e9c, #a6c3b2, #e0e8cd);
     padding-top: 12em;
-     
+    
 } 
 
 
@@ -251,7 +260,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1frr;
-    
+    z-index: -1;
     padding: 5em;
     margin-bottom: 25em;
     gap: 10em 3em;
@@ -392,17 +401,17 @@ main {
 
 footer {
   display: grid;
-  grid-template-rows: 65% 25% 10%;
+  grid-template-rows: 75% 18% 7%;
   background-color: rgb(64, 80, 101);
   
 }
 
+
 .footer__content {
-  margin-top: 3em;
-  display: flex;
-  flex-direction: wrap;
-  align-items: center;
-  justify-content: space-around;
+  margin: 5em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  
   
 }
 .footer__contact {
@@ -411,12 +420,11 @@ footer {
   align-items: center;
   justify-content: center;
   color: rgb(213, 207, 199);
-  gap: 1em;
+  gap: 2em;
   font-size: 1rem;
   font-family: 'Montserrat Alternates', sans-serif;
-  
-  
 }
+
 .footer__contact a {
   font-size: 1.5rem;
 }
@@ -427,11 +435,10 @@ footer {
 
 .footer__img {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  place-content: center;
 }
 .footer__img img {
-  width: 20%;
+  width: 40%;
 }
 
 .social-media {
@@ -502,15 +509,7 @@ main {
    
 } 
 
-  /* section picture:nth-child(1) {
-    order: -5;
-    
-  } */
-  
-  /* section picture:nth-child(6) {
-    order: -9;
-    
-  } */
+ 
   .about {
     display: flex;
     flex-direction: column;
@@ -557,9 +556,50 @@ main {
 
   
 }
- 
+
+footer {
+  display: grid;
+  grid-template-rows: 60% 25% 15%;
+  background-color: rgb(64, 80, 101);
   
-};
+}
+.footer__content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .footer__content {
+  display: grid;
+  
+  grid-template-rows: 60% 30% 10%;
+} */
+/* .footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color: rgb(213, 207, 199);
+  gap: 1em;
+  font-size: 1rem;
+  font-family: 'Montserrat Alternates', sans-serif;
+} */
+
+.footer__img {
+  display: none;
+  
+}
+
+
+
+  
+}; 
 
 
 
@@ -580,15 +620,7 @@ main {
    
 } 
 
-  /* section picture:nth-child(1) {
-    order: -5;
-    
-  } */
-  
-  /* section picture:nth-child(6) {
-    order: -9;
-    
-  } */
+
   .about {
     display: flex;
     flex-direction: column;
@@ -635,6 +667,14 @@ main {
 
   
 }
+
+footer {
+  display: grid;
+  grid-template-rows: 60% 25% 15%;
+  background-color: rgb(64, 80, 101);
+  
+}
+
   
 };
 
@@ -664,4 +704,6 @@ main {
   .burguer__items li a {
     font-size: 16px;
   }
+
+  
 }
